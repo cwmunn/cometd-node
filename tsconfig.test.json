@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+		"module": "commonjs",
+		"noLib":false,
+		"target": "es6",
+		"sourceMap": true,
+        "outDir": "target",
+        "moduleResolution": "node",
+        "baseUrl": "./test/specs",
+        "paths": {
+            "gws/*": ["./*"]
+        }
+    },
+    "include": [
+	  	"test/specs/**/*.ts", "src/declarations/**/*.d.ts"
+    ]
+}
