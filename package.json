@@ -7,6 +7,7 @@
   "description": "Sample cometd server usage",
   "dependencies": {
     "body-parser": "^1.15.1",
+    "cometd-nodejs-server": "1.0.0-BETA0",
     "cookie": "^0.3.1",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
@@ -14,6 +15,7 @@
     "optimist": "^0.6.1",
     "request": "^2.72.0",
     "uuid": "^2.0.2"
+    
   },
   "devDependencies": {
     "@types/basic-auth": "^0.0.30",
@@ -35,6 +37,7 @@
     "chai-as-promised": "^6.0.0",
     "eslint-plugin-tdd": "^0.5.0",
     "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-mocha-istanbul-extra": "^5.0.2-1",
     "grunt-ts": "^6.0.0-beta.3",
     "grunt-tslint": "^3.2.1",
