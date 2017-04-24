@@ -21,6 +21,7 @@ interface CometDServer {
   removeListener:       any;
   listeners:            any;
   close:                any;
+  context:              any;
   options:              CometDOptions;
   createServerChannel:  (name: string) => CometDServerChannel;
   getServerChannel:     (name: string) => CometDServerChannel;

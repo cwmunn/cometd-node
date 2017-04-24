@@ -10,8 +10,7 @@ let onHandshake = (handshake) => {
     }*/
     
     console.log('subscribing to channels...');
-    cometd.subscribe('/wwe/v3/voice/username', onMessage);
-    cometd.subscribe(`/wwe/v3/voice/username/${handshake.clientId}`, onMessage);
+    cometd.subscribe('/wwe/v3/voice', onMessage);
   } 
 };
 
@@ -48,6 +47,22 @@ let disconnect = () => {
   cometd.disconnect();
 };
 
+let login = () => {
+  return xhr.post('/api/login', { username: $('#username').val(), password: $('#password').val() });
+};
+
+let logout = () => {
+  return xhr.post('/api/logout');
+};
+
+let search = () => {
+   return xhr.post(`/api/search?clientId=${cometd.getClientId()}`);
+};
+
+let broadcast = () => {
+   return xhr.post('/api/broadcast');
+};
+
 $(document).ready(() => {
   cometd = $.cometd;
   cometd.unregisterTransport("websocket");
@@ -60,6 +75,10 @@ $(document).ready(() => {
     logLevel: "debug"*/
   });
   
+  $('#login').click(login);
+  $('#logout').click(logout);
   $('#connect').click(connect);
   $('#disconnect').click(disconnect); 
+  $('#search').click(search);
+  $('#broadcast').click(broadcast);
 });

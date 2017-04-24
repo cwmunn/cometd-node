@@ -6,6 +6,7 @@
   },
   "description": "Sample cometd server usage",
   "dependencies": {
+    "basic-auth": "^1.0.4",
     "body-parser": "^1.15.1",
     "cometd-nodejs-server": "1.0.0-BETA0",
     "cookie": "^0.3.1",
